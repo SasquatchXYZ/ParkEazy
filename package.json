@@ -1,0 +1,38 @@
+{
+  "name": "ShoppingWithFriends",
+  "version": "1.0.0",
+  "description": "Project 2 - Group 9 A Shopping Helper Program for the Holidays.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SasquatchXYZ/ShoppingWithFriends.git"
+  },
+  "keywords": [],
+  "author": "Dalton Ricker, Matt Crowe, Eric Remoroza, Rodney Stephenson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SasquatchXYZ/ShoppingWithFriends/issues"
+  },
+  "homepage": "https://github.com/SasquatchXYZ/ShoppingWithFriends#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.41.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "prettier": "^1.15.3"
+  }
+}
