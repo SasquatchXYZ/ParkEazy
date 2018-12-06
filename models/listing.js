@@ -51,5 +51,5 @@ module.exports = function(sequelize, DataTypes) {
     description: DataTypes.TEXT
   });
 
-  return Listing
+  return Listing;
 };

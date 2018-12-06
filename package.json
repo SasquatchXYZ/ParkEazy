@@ -4,7 +4,8 @@
   "description": "Project 2 - Group 9 A Parking Finding Web Application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "NODE_ENV=test nyc mocha -u tdd --reporter spec --exit"
   },
   "repository": {
     "type": "git",
