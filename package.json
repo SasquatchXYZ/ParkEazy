@@ -1,22 +1,23 @@
 {
-  "name": "ShoppingWithFriends",
+  "name": "ParkEazy",
   "version": "1.0.0",
-  "description": "Project 2 - Group 9 A Shopping Helper Program for the Holidays.",
+  "description": "Project 2 - Group 9 A Parking Finding Web Application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "NODE_ENV=test nyc mocha -u tdd --reporter spec --exit"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SasquatchXYZ/ShoppingWithFriends.git"
+    "url": "git+https://github.com/SasquatchXYZ/ParkEazy.git"
   },
   "keywords": [],
   "author": "Dalton Ricker, Matt Crowe, Eric Remoroza, Rodney Stephenson",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SasquatchXYZ/ShoppingWithFriends/issues"
+    "url": "https://github.com/SasquatchXYZ/ParkEazy/issues"
   },
-  "homepage": "https://github.com/SasquatchXYZ/ShoppingWithFriends#readme",
+  "homepage": "https://github.com/SasquatchXYZ/ParkEazy#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "dotenv": "^6.1.0",
