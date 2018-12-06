@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS parkeazy_db;
+CREATE DATABASE parkeazy_db;
+
+DROP DATABASE IF EXISTS test_db;
+CREATE DATABASE test_db;
