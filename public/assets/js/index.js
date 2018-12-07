@@ -26,12 +26,12 @@ const API = {
   }
 };
 
-let listingFormSubmit = function(event) {
+var listingFormSubmit = function(event) {
   event.preventDefault();
 
   const listing = {
-    hostName: $inputName.val().trim(),
-    phoneNum: $inputNumber.val().trim(),
+    name: $inputName.val().trim(),
+    phone: $inputNumber.val().trim(),
     email: $inputEmail.val().trim(),
     street: $inputAddress.val().trim(),
     city: $inputCity.val().trim(),
@@ -39,7 +39,19 @@ let listingFormSubmit = function(event) {
     zip: $inputZip.val().trim()
   };
 
-  console.log("test");
+  console.log(listing);
+
+  API.saveListing(listing).then(function() {
+    alert("Thank You for Posting a New Listing");
+  });
+
+  $inputName.val("");
+  $inputNumber.val("");
+  $inputEmail.val("");
+  $inputAddress.val("");
+  $inputCity.val("");
+  $inputState.val("");
+  $inputZip.val("");
 };
 
 $submitListing.on("click", listingFormSubmit);

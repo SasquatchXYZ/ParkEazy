@@ -1,10 +1,9 @@
 const db = require("../models");
 
 module.exports = function(app) {
-  /*app.get("/api/listings", function(req, res) {
+  app.get("/api/listings", function(req, res) {
     db.Listing.findAll({}).then(function(dbListings) {
-      res.json(dbListings);rs
-
+      res.json(dbListings);
     });
   });
 
@@ -20,5 +19,5 @@ module.exports = function(app) {
     ) {
       res.json(dbListing);
     });
-  });*/
+  });
 };
