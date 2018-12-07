@@ -6,6 +6,7 @@ const $inputAddress = $("#inputAddress");
 const $inputCity = $("#inputCity");
 const $inputState = $("#inputState");
 const $inputZip = $("#inputZip");
+const $inputDescription = $("#inputDescription");
 
 const API = {
   saveListing: function(listing) {
@@ -26,7 +27,7 @@ const API = {
   }
 };
 
-var listingFormSubmit = function(event) {
+const listingFormSubmit = function(event) {
   event.preventDefault();
 
   const listing = {
@@ -36,7 +37,8 @@ var listingFormSubmit = function(event) {
     street: $inputAddress.val().trim(),
     city: $inputCity.val().trim(),
     state: $inputState.val().trim(),
-    zip: $inputZip.val().trim()
+    zip: $inputZip.val().trim(),
+    description: $inputDescription.val().trim()
   };
 
   console.log(listing);
@@ -52,6 +54,7 @@ var listingFormSubmit = function(event) {
   $inputCity.val("");
   $inputState.val("");
   $inputZip.val("");
+  $inputDescription.val("")
 };
 
 $submitListing.on("click", listingFormSubmit);
