@@ -1,4 +1,11 @@
-const submitBtn = $("#submit");
+const $submitListing = $("#submit-listing");
+const $inputName = $("#inputName");
+const $inputNumber = $("#inputNumber");
+const $inputEmail = $("#inputEmail");
+const $inputAddress = $("#inputAddress");
+const $inputCity = $("#inputCity");
+const $inputState = $("#inputState");
+const $inputZip = $("#inputZip");
 
 const API = {
   saveListing: function(listing) {
@@ -19,6 +26,20 @@ const API = {
   }
 };
 
-const listingFormSubmit = function(event) {
+let listingFormSubmit = function(event) {
   event.preventDefault();
+
+  const listing = {
+    hostName: $inputName.val().trim(),
+    phoneNum: $inputNumber.val().trim(),
+    email: $inputEmail.val().trim(),
+    street: $inputAddress.val().trim(),
+    city: $inputCity.val().trim(),
+    state: $inputState.val().trim(),
+    zip: $inputZip.val().trim()
+  };
+
+  console.log("test");
 };
+
+$submitListing.on("click", listingFormSubmit);
