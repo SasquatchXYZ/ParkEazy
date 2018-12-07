@@ -2,10 +2,12 @@
   "name": "ParkEazy",
   "version": "1.0.0",
   "description": "Project 2 - Group 9 A Parking Finding Web Application",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "NODE_ENV=test nyc mocha -u tdd --reporter spec --exit"
+    "lint": "eslint **/*.js --quiet",
+    "fix": "eslint --fix .",
+    "test": "npm run lint && NODE_ENV=test nyc mocha -u tdd --reporter spec --exit"
   },
   "repository": {
     "type": "git",

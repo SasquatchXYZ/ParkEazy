@@ -1,13 +1,13 @@
 module.exports = function(sequelize, DataTypes) {
   const Listing = sequelize.define("Listing", {
-    host_name: {
+    hostName: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 150]
       }
     },
-    phone_num: {
+    phoneNum: {
       type: DataTypes.STRING,
       validate: {
         isNumeric: true
@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
         isEmail: true
       }
     },
-    street_name: {
+    street: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {

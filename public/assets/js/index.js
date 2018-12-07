@@ -21,6 +21,4 @@ const API = {
 
 const listingFormSubmit = function(event) {
   event.preventDefault();
-
-
 };
