@@ -54,7 +54,7 @@ const listingFormSubmit = function(event) {
   $inputCity.val("");
   $inputState.val("");
   $inputZip.val("");
-  $inputDescription.val("")
+  $inputDescription.val("");
 };
 
 $submitListing.on("click", listingFormSubmit);
