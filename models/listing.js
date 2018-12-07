@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
         isEmail: true
       }
     },
-    streetName: {
+    street: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
