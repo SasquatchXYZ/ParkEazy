@@ -6,9 +6,10 @@ module.exports = function(app) {
   });
 
   app.get("/search", function(req, res) {
-    db.Listing.findAll({}).then(function() {
+    res.render("search", { testMessage: "This is the search page..." });
+    /*db.Listing.findAll({}).then(function() {
       res.render("search", { testMessage: "This is the search page..." });
-    });
+    });*/
   });
 
   app.get("/search/:id", function(req, res) {
