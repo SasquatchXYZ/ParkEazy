@@ -4,7 +4,7 @@
   "description": "Project 2 - Group 9 A Parking Finding Web Application",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon || node server.js",
     "lint": "eslint **/*.js --quiet",
     "fix": "eslint --fix .",
     "test": "npm run lint && NODE_ENV=test nyc mocha -u tdd --reporter spec --exit"
