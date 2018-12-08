@@ -22,7 +22,7 @@
   "homepage": "https://github.com/SasquatchXYZ/ParkEazy#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "dotenv": "^6.1.0",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "mysql2": "^1.6.4",
@@ -31,7 +31,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.2.0",
-    "eslint": "^5.9.0",
+    "eslint": "^5.10.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.0",
     "mocha": "^5.2.0",

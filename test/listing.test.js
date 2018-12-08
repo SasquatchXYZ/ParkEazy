@@ -1,6 +1,8 @@
+require("dotenv").config({ path: __dirname + ".env" });
+
 const chai = require("chai");
 const chaiHttp = require("chai-http");
-const server = require("../server");
+const server = require("./server.test");
 const db = require("../models");
 const expect = chai.expect;
 
