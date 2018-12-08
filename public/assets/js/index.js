@@ -31,6 +31,8 @@ const API = {
 const listingFormSubmit = function(event) {
   event.preventDefault();
 
+
+
   const listing = {
     name: $inputName.val().trim(),
     phone: $inputNumber.val().trim(),
@@ -41,6 +43,12 @@ const listingFormSubmit = function(event) {
     zip: $inputZip.val().trim(),
     description: $inputDescription.val().trim()
   };
+
+  let mapString = `q=${listing.street.split(" ").join("+")}+${listing.city.split(" ").join("+")}+${listing.state}+${listing.zip}`;
+
+  console.log(mapString);
+
+  listing.map = mapString;
 
   console.log(listing);
 
