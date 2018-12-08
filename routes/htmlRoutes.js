@@ -8,7 +8,7 @@ module.exports = function(app) {
   app.get("/search", function(req, res) {
     //res.render("search", { testMessage: "This is the search page..." });
     db.Listing.findAll({}).then(function(data) {
-      const hbsObject = {Listing: data};
+      const hbsObject = { Listing: data };
       res.render("search", hbsObject);
     });
   });
@@ -30,7 +30,7 @@ module.exports = function(app) {
   });
 
   app.get("/about", function(req, res) {
-    res.render("about")
+    res.render("about");
   });
 
   app.get("*", function(req, res) {

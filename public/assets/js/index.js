@@ -7,7 +7,6 @@ const $inputCity = $("#inputCity");
 const $inputState = $("#inputState");
 const $inputZip = $("#inputZip");
 const $inputDescription = $("#inputDescription");
-const $viewListing = $(".view-listing");
 
 const API = {
   saveListing: function(listing) {
@@ -31,8 +30,6 @@ const API = {
 const listingFormSubmit = function(event) {
   event.preventDefault();
 
-
-
   const listing = {
     name: $inputName.val().trim(),
     phone: $inputNumber.val().trim(),
@@ -44,7 +41,11 @@ const listingFormSubmit = function(event) {
     description: $inputDescription.val().trim()
   };
 
-  let mapString = `q=${listing.street.split(" ").join("+")}+${listing.city.split(" ").join("+")}+${listing.state}+${listing.zip}`;
+  let mapString = `q=${listing.street
+    .split(" ")
+    .join("+")}+${listing.city.split(" ").join("+")}+${listing.state}+${
+    listing.zip
+  }`;
 
   console.log(mapString);
 

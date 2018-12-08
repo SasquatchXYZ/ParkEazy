@@ -51,7 +51,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     description: DataTypes.TEXT,
-    map: DataTypes.STRING,
+    map: DataTypes.STRING
   });
 
   return Listing;
