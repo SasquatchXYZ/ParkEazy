@@ -29,6 +29,10 @@ module.exports = function(app) {
     res.render("create");
   });
 
+  app.get("/about", function(req, res) {
+    res.render("about")
+  });
+
   app.get("*", function(req, res) {
     res.render("404");
   });

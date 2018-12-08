@@ -1,20 +1,21 @@
-<header>
-  <h2 id="head-title">ParkEazy</h2>
-</header>
-<div class='container'>
-  <h4>Available Listings</h4>
-  <div class='row'>
-    <div class="col-sm-12">
-      <ul class='list-group list-group-flush'>
-        {{#each Listing}}
-          <li class="list-group-item">
-            {{this.street}}
-            <a href="listing/{{this.id}}" class='btn btn-outline-secondary btn-sm' data-id='{{this.id}}'><i class="fas fa-search-location"></i></a>
-            <!--<button type='button' class='btn-btn-outline-secondary view-listing' data-id='{{this.id}}'><i class="fas fa-search-location"></i></button>-->
-          </li>
-        {{/each}}
-      </ul>
-      <!--<div class="accordion" id="listingAccordion">
+<div class='row mt-5'>
+  <div class='col-sm-12'>
+    <div class='card mt-5'>
+      <div class='card-header'>
+        <h4>Available Listings</h4>
+      </div>
+      <div class='card-body'>
+        <ul class='list-group list-group-flush'>
+          {{#each Listing}}
+            <li class="list-group-item">
+              {{this.street}}
+              <a href="listing/{{this.id}}" class='btn btn-outline-secondary btn-sm listing-view' data-id='{{this.id}}'><i
+                class="fas fa-search-location"></i></a>
+              <!--<button type='button' class='btn-btn-outline-secondary view-listing' data-id='{{this.id}}'><i class="fas fa-search-location"></i></button>-->
+            </li>
+          {{/each}}
+        </ul>
+        <!--<div class="accordion" id="listingAccordion">
         {{#each Listing}}
           <div class="card">
             <div class="card-header" id="heading{{this.id}}">
@@ -40,11 +41,7 @@
           </div>
         {{/each}}
       </div>-->
+      </div>
     </div>
   </div>
 </div>
-
-
-<footer>
-  <p>&copy 2018</p>
-</footer>
