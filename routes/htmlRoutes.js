@@ -6,10 +6,11 @@ module.exports = function(app) {
   });
 
   app.get("/search", function(req, res) {
-    res.render("search", { testMessage: "This is the search page..." });
-    /*db.Listing.findAll({}).then(function() {
-      res.render("search", { testMessage: "This is the search page..." });
-    });*/
+    //res.render("search", { testMessage: "This is the search page..." });
+    db.Listing.findAll({}).then(function(data) {
+      const hbsObject = {Listing: data};
+      res.render("search", hbsObject);
+    });
   });
 
   app.get("/search/:id", function(req, res) {
