@@ -19,7 +19,7 @@ describe("GET /api/listings", function() {
     });
   });
 
-  it("should find all examples", function(done) {
+  it("should find all listings", function(done) {
     // Add some examples to the db to test with
     db.Listing.bulkCreate([
       { text: "First Listing", description: "First Description" },

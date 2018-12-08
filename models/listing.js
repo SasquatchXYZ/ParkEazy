@@ -1,16 +1,18 @@
 module.exports = function(sequelize, DataTypes) {
   const Listing = sequelize.define("Listing", {
-    hostName: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
+        is: /^[a-z]+(?:\s?)?(?:[a-z]+)?$/i,
         len: [1, 150]
       }
     },
-    phoneNum: {
+    phone: {
       type: DataTypes.STRING,
       validate: {
-        isNumeric: true
+        isNumeric: true,
+        len: [10, 15]
       }
     },
     email: {
@@ -29,7 +31,7 @@ module.exports = function(sequelize, DataTypes) {
     city: {
       type: DataTypes.STRING,
       validate: {
-        isAlpha: true,
+        is: /^[a-z]+(?:\s?)?(?:[a-z]+)?$/i,
         len: [1, 150]
       }
     },
@@ -37,7 +39,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       validate: {
         isAlpha: true,
-        len: [2, 150]
+        len: [2]
       }
     },
     zip: {
@@ -48,7 +50,8 @@ module.exports = function(sequelize, DataTypes) {
         min: 5
       }
     },
-    description: DataTypes.TEXT
+    description: DataTypes.TEXT,
+    map: DataTypes.STRING
   });
 
   return Listing;

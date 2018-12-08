@@ -4,6 +4,10 @@
     text-align:center;
 }
 
-body {
+/*body {
     text-align: center;
+}*/
+
+.listing-view {
+    float: right;
 }
