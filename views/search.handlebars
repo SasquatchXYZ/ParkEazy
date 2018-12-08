@@ -9,8 +9,8 @@
         {{#each Listing}}
           <li class="list-group-item">
             {{this.street}}
-            <!--<a href="/listings/{{this.id}}" class='btn btn-outline-secondary btn-sm view-listing' data-id='{{this.id}}'><i class="fas fa-search-location"></i></a>-->
-            <button type='button' class='btn-btn-outline-secondary view-listing' data-id='{{this.id}}'><i class="fas fa-search-location"></i></button>
+            <a href="/listing/{{this.id}}" class='btn btn-outline-secondary btn-sm' data-id='{{this.id}}'><i class="fas fa-search-location"></i></a>
+            <!--<button type='button' class='btn-btn-outline-secondary view-listing' data-id='{{this.id}}'><i class="fas fa-search-location"></i></button>-->
           </li>
         {{/each}}
       </ul>

@@ -2,7 +2,7 @@ const db = require("../models");
 
 module.exports = function(app) {
   app.get("/", function(req, res) {
-    res.render("index", { testMessage: "This is the landing page..." });
+    res.render("index");
   });
 
   app.get("/search", function(req, res) {
@@ -13,7 +13,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/search/:id", function(req, res) {
+  app.get("/listing/:id", function(req, res) {
     db.Listing.findOne({
       where: {
         id: req.params.id
@@ -26,7 +26,7 @@ module.exports = function(app) {
   });
 
   app.get("/create", function(req, res) {
-    res.render("create", { testMessage: "This is the create page..." });
+    res.render("create");
   });
 
   app.get("*", function(req, res) {

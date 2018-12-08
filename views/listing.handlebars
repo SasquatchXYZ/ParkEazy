@@ -1,6 +1,39 @@
-<div class='container'>
-  <div class='jumbotron mt-4'>
-    {{this}}
-    <a href='/search'>Back to Listings</a>
+
+<div class='row'>
+  <div class='col-sm-12'>
+    <h1 class='display-4'>Details</h1>
   </div>
 </div>
+
+<div class='row'>
+  <div class='col-sm-12 col-lg-8'>
+    <div class="card">
+      <div class="card-header">{{listing.name}}</div>
+      <div class="card-body">
+        <h5 class='card-title'>{{listing.name}}</h5>
+        <h6 class='card-subtitle mb-2 text-muted'>{{listing.email}} | {{listing.phone}}</h6>
+        <p class='card-text'><strong><u>Address</u></strong></p>
+        <p class='card-text'>{{listing.street}} {{listing.city}}, {{listing.state}} {{listing.zip}}</p>
+        <p class='card-text'><strong><u>Details</u></strong></p>
+        <p class='card-text'>{{listing.description}}</p>
+      </div>
+    </div>
+  </div>
+  <div class='col-sm-12 col-lg-4'>
+    <div class='card'>
+      <div class='card-header'>Hopefully Map goes here...</div>
+    </div>
+  </div>
+</div>
+
+<div class='jumbotron mt-4'>
+  <a href='/search'>Back to Listings</a>
+</div>
+
+<!--  <div class='jumbotron'>
+    <h1 class='display-4'>Details</h1>
+  </div>-->
+
+<footer>
+  <p>&copy 2018</p>
+</footer>
