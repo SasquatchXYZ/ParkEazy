@@ -7,6 +7,7 @@ const $inputCity = $("#inputCity");
 const $inputState = $("#inputState");
 const $inputZip = $("#inputZip");
 const $inputDescription = $("#inputDescription");
+const $viewListing = $(".view-listing");
 
 const API = {
   saveListing: function(listing) {
@@ -58,3 +59,8 @@ const listingFormSubmit = function(event) {
 };
 
 $submitListing.on("click", listingFormSubmit);
+$viewListing.on("click", function(event) {
+  event.preventDefault();
+  const id = $(this).data("id");
+  console.log(id);
+});

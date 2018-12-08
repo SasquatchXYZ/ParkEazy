@@ -14,10 +14,12 @@ module.exports = function(app) {
   });
 
   app.get("/search/:id", function(req, res) {
-    db.Listing.findOne({ where: { id: req.params.id } }).then(function(
-      dbListing
-    ) {
-      res.render("search", {
+    db.Listing.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbListing) {
+      res.render("listing", {
         listing: dbListing
       });
     });
