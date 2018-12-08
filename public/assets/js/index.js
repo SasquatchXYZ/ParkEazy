@@ -68,10 +68,3 @@ const listingFormSubmit = function(event) {
 };
 
 $submitListing.on("click", listingFormSubmit);
-
-/*
-$viewListing.on("click", function(event) {
-  event.preventDefault();
-  const id = $(this).data("id");
-  console.log(id);
-});*/
