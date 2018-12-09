@@ -9,6 +9,8 @@
           {{#each Listing}}
             <li class="list-group-item">
               {{this.street}}
+              <span class="badge badge-primary badge-pill">{{this.amount}}</span>
+              | Available: {{this.from}}
               <a href="listing/{{this.id}}" class='btn btn-outline-secondary btn-sm listing-view' data-id='{{this.id}}'><i
                 class="fas fa-search-location"></i></a>
               <!--<button type='button' class='btn-btn-outline-secondary view-listing' data-id='{{this.id}}'><i class="fas fa-search-location"></i></button>-->
