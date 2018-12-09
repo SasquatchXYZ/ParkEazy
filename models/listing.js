@@ -50,6 +50,33 @@ module.exports = function(sequelize, DataTypes) {
         min: 5
       }
     },
+    from: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    to: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    price: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isDecimal: true
+      }
+    },
+    type: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    amount: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isNumeric: true,
+        max: 10
+      }
+    },
     description: DataTypes.TEXT,
     map: DataTypes.STRING
   });
