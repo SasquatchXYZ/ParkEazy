@@ -5,18 +5,19 @@
         <h4>Available Listings</h4>
       </div>
       <div class='card-body'>
-        <ul class='list-group list-group-flush'>
+        <div class='list-group list-group-flush'>
           {{#each Listing}}
-            <li class="list-group-item">
-              {{this.street}}
-              <span class="badge badge-primary badge-pill">{{this.amount}}</span>
-              | Available: {{this.from}}
-              <a href="listing/{{this.id}}" class='btn btn-outline-secondary btn-sm listing-view' data-id='{{this.id}}'><i
-                class="fas fa-search-location"></i></a>
-              <!--<button type='button' class='btn-btn-outline-secondary view-listing' data-id='{{this.id}}'><i class="fas fa-search-location"></i></button>-->
-            </li>
+
+            <a href="listing/{{this.id}}" class="list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{this.street}}</h5>
+                <span class="badge badge-primary badge-pill">{{this.amount}}</span>
+              </div>
+              <p class="mb-1">Available: {{this.from}}</p>
+              <small>{{this.type}}</small>
+            </a>
           {{/each}}
-        </ul>
+        </div>
         <!--<div class="accordion" id="listingAccordion">
         {{#each Listing}}
           <div class="card">

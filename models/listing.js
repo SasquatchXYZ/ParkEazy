@@ -53,16 +53,10 @@ module.exports = function(sequelize, DataTypes) {
     from: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isDate: true
-      }
     },
     to: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isDate: true
-      }
     },
     price: {
       type: DataTypes.STRING,
