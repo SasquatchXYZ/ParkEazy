@@ -52,11 +52,11 @@ module.exports = function(sequelize, DataTypes) {
     },
     from: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     to: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     price: {
       type: DataTypes.STRING,
