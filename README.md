@@ -3,7 +3,7 @@
 
 An AirBnB-esque web application... but for parking, where users search for available parking permits/spaces that other's have posted.  It is web application using a MySQL database to store the user data, Sequelize as the ORM, Node & Express to run the server and app, and Handlebars as the templating engine.
 
-![Screenshot](public/assets/img/...)
+![Screenshot](public/assets/img/screenshot.png)
 
 ## Getting Started
 
@@ -57,23 +57,13 @@ prettier                (npm install --save-dev prettier)
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+In order to run the tests for the program, simply open up the terminal, navigate to the project folder, and run:
 
 ```
-Give an example
+npm test
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+This will call ESlint and Prettier to run to reformat and ensure completeness of code.  Following that test it will then call the nyc and mocha and mocha packages to run a server test and an API test to query the database.
 
 ## Running 'ParkEazy'
 
@@ -89,7 +79,7 @@ node server.js
 ```
 
 This starts the server which is currently set to run at PORT 8080 (http://localhost:8080/), at the same time the model 'listing.js' will create, via Sequelize, the pertinent tables for the application to use.
-That is really all there is to starting the application running, after that everything else is run in your browser.
+That is really all there is to starting the application running, after that everything else is run in your browser.  
 
 ## Deployment
 
