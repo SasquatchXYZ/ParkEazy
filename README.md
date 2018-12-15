@@ -85,7 +85,9 @@ That is really all there is to starting the application running, after that ever
 
 * [Deployed Site](https://parkeazy.herokuapp.com/)
 
-To Come...
+Currently the site is deployed using Heroku, so if that is the route you chose to use you will need a Heroku Account and to have it set up and installed on your computer.  I will provide additional instructions to deploy to Heroku.
+
+Assuming so far
 
 ## Built With
 

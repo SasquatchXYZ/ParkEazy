@@ -1,4 +1,4 @@
-require("dotenv").config({ path: __dirname + ".env" });
+require("dotenv").config({ path: "./test/.env" });
 
 const chai = require("chai");
 const chaiHttp = require("chai-http");
@@ -17,6 +17,7 @@ describe("GET /api/listings", function() {
   beforeEach(function(done) {
     request = chai.request(server);
     db.sequelize.sync({ force: true }).then(function() {
+      console.log("hello");
       done();
     });
   });
@@ -24,8 +25,26 @@ describe("GET /api/listings", function() {
   it("should find all listings", function(done) {
     // Add some examples to the db to test with
     db.Listing.bulkCreate([
-      { name: "First Name", street: "First Street", zip: "30303" },
-      { name: "Second Name", street: "Second Street", zip: "30303" }
+      {
+        name: "First Name",
+        street: "First Street",
+        zip: "30303",
+        from: "Jan 1st 19",
+        to: "Jan 2nd 19",
+        price: "2",
+        type: "Parking Pass",
+        amount: "2"
+      },
+      {
+        name: "Second Name",
+        street: "Second Street",
+        zip: "30303",
+        from: "Jan 1st 19",
+        to: "Jan 2nd 19",
+        price: "2",
+        type: "Parking Pass",
+        amount: "2"
+      }
     ]).then(function() {
       // Request the route that returns all examples
       request.get("/api/listings").end(function(err, res) {
@@ -47,7 +66,12 @@ describe("GET /api/listings", function() {
           .that.includes({
             name: "First Name",
             street: "First Street",
-            zip: "30303"
+            zip: "30303",
+            from: "Jan 1st 19",
+            to: "Jan 2nd 19",
+            price: "2",
+            type: "Parking Pass",
+            amount: "2"
           });
 
         expect(responseBody[1])
@@ -55,7 +79,12 @@ describe("GET /api/listings", function() {
           .that.includes({
             name: "Second Name",
             street: "Second Street",
-            zip: "30303"
+            zip: "30303",
+            from: "Jan 1st 19",
+            to: "Jan 2nd 19",
+            price: "2",
+            type: "Parking Pass",
+            amount: "2"
           });
 
         // The `done` function is used to end any asynchronous tests
