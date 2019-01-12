@@ -3,7 +3,7 @@
 
 An AirBnB-esque web application... but for parking, where users search for available parking permits/spaces that other's have posted.  It is web application using a MySQL database to store the user data, Sequelize as the ORM, Node & Express to run the server and app, and Handlebars as the templating engine.
 
-![Screenshot](public/assets/img/...)
+![Screenshot](public/assets/img/screenshot.png)
 
 ## Getting Started
 
