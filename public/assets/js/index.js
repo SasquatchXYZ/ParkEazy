@@ -14,25 +14,23 @@ const $type = $("#passSpot");
 const $amount = $("#amount");
 
 const API = {
-  saveListing: function(listing) {
-    return $.ajax({
+  saveListing: listing =>
+    $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
       url: "api/listings",
       data: JSON.stringify(listing)
-    });
-  },
-  getListings: function() {
-    return $.ajax({
+    }),
+  getListings: () =>
+    $.ajax({
       url: "api/listings",
       type: "GET"
-    });
-  }
+    })
 };
 
-const listingFormSubmit = function(event) {
+const listingFormSubmit = event =>{
   event.preventDefault();
   console.log($inputName.val().trim());
   console.log($inputFrom.val().trim());
@@ -68,9 +66,9 @@ const listingFormSubmit = function(event) {
 
   console.log(listing);
 
-  API.saveListing(listing).then(function() {
-    alert("Thank You for Posting a New Listing");
-  });
+  API.saveListing(listing).then(() =>
+    alert("Thank You for Posting a New Listing")
+  );
 
   $inputName.val("");
   $inputNumber.val("");

@@ -28,10 +28,12 @@ if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
 
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
-    console.log(`Server listening on: http://localhost:${PORT}`);
-  });
-});
+db.sequelize
+  .sync(syncOptions)
+  .then(() =>
+    app.listen(PORT, () =>
+      console.log(`Server listening on: http://localhost:${PORT}`)
+    )
+  );
 
 module.exports = app;

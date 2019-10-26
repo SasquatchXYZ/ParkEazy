@@ -1,39 +1,31 @@
 const db = require("../models");
 
-module.exports = function(app) {
-  app.get("/", function(req, res) {
-    res.render("index");
-  });
+module.exports = app => {
+  app.get("/", (req, res) => res.render("index"));
 
-  app.get("/search", function(req, res) {
+  app.get("/search", (req, res) => {
     //res.render("search", { testMessage: "This is the search page..." });
-    db.Listing.findAll({}).then(function(data) {
+    db.Listing.findAll({}).then(data => {
       const hbsObject = { Listing: data };
       res.render("search", hbsObject);
     });
   });
 
-  app.get("/listing/:id", function(req, res) {
+  app.get("/listing/:id", (req, res) => {
     db.Listing.findOne({
       where: {
         id: req.params.id
       }
-    }).then(function(dbListing) {
+    }).then(dbListing =>
       res.render("listing", {
         listing: dbListing
-      });
-    });
+      })
+    );
   });
 
-  app.get("/create", function(req, res) {
-    res.render("create");
-  });
+  app.get("/create", (req, res) => res.render("create"));
 
-  app.get("/about", function(req, res) {
-    res.render("about");
-  });
+  app.get("/about", (req, res) => res.render("about"));
 
-  app.get("*", function(req, res) {
-    res.render("404");
-  });
+  app.get("*", (req, res) => res.render("404"));
 };
